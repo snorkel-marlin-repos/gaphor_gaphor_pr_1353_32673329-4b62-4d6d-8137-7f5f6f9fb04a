@@ -116,7 +116,7 @@ jobs:
       - name: Build Wheel
         run: poetry run poe dist
       - name: Import codesign certificate
-        uses: apple-actions/import-codesign-certs@v1.0.4
+        uses: apple-actions/import-codesign-certs@v5.0.3
         with:
           p12-file-base64: ${{ secrets.BASE64_ENCODED_P12 }}
           p12-password: ${{ secrets.CERTPASSWORD_P12 }}
