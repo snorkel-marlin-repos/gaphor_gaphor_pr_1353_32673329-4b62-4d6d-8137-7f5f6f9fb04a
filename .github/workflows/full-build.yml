@@ -75,7 +75,7 @@ jobs:
           name: Gaphor-${{ steps.setup_and_test.outputs.version }}-x86_64.AppImage
           path: _packaging/dist/Gaphor-${{ steps.setup_and_test.outputs.version }}-x86_64.AppImage
       - name: Upload Assets (release only)
-        uses: AButler/upload-release-assets@v2.0
+        uses: AButler/upload-release-assets@v3.0
         if: github.event_name == 'release'
         with:
           files: "_packaging/dist/*; dist/*"
@@ -159,7 +159,7 @@ jobs:
           name: Gaphor-${{ steps.setup_and_test.outputs.version }}.dmg
           path: _packaging/dist/Gaphor-${{ steps.setup_and_test.outputs.version }}.dmg
       - name: Upload Assets (release only)
-        uses: AButler/upload-release-assets@v2.0
+        uses: AButler/upload-release-assets@v3.0
         if: github.event_name == 'release'
         with:
           files: "_packaging/dist/Gaphor-${{ steps.setup_and_test.outputs.version }}.dmg"
@@ -271,7 +271,7 @@ jobs:
           name: gaphor-${{ steps.setup_and_test.outputs.version }}-portable.exe
           path: _packaging/dist/gaphor-${{ steps.setup_and_test.outputs.version }}-portable.exe
       - name: Upload Assets (release only)
-        uses: AButler/upload-release-assets@v2.0
+        uses: AButler/upload-release-assets@v3.0
         if: github.event_name == 'release'
         with:
           files: "_packaging/dist/*.exe"
